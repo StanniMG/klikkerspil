@@ -30,18 +30,34 @@ body{
     cursor: pointer;
     border-radius: 5px;
     width: 500px;
-    height: 60px;
+    height: 65px;
 }
 .x{
     font-family: Verdana;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: center;
     background-color: hsl(60, 100%, 40%);
     cursor: pointer;
     border-radius: 5px;
-    width: 164px;
+    width: 97px;
     height: 35px;
 }
+#x100000{
+    font-size: 1.1em;
+}
+#x1000000{
+    font-size: 0.88em;
+}
+#x10000000{
+    font-size: 0.80em;
+}
+#x100000000{
+    font-size: 0.75em;
+}
+#x1000000000{
+    font-size: 0.66em;
+}
+
 #Label{
     font-size: 2em;
     font-family: Arial;
