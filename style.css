@@ -32,7 +32,16 @@ body{
     width: 500px;
     height: 60px;
 }
-
+.x{
+    font-family: Verdana;
+    font-size: 1.5em;
+    text-align: center;
+    background-color: hsl(60, 100%, 40%);
+    cursor: pointer;
+    border-radius: 5px;
+    width: 164px;
+    height: 35px;
+}
 #Label{
     font-size: 2em;
     font-family: Arial;
