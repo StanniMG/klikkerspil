@@ -25,8 +25,8 @@ function updateUI() {
     talLabel.textContent = count;
     increaseLabel.textContent = `${increase} per klik`;
     increasePerSecLabel.textContent = `${increasePerSec} per sekund`;
-    increaseBtn.textContent = `Køb +${plusIncrease} klik (${increaseCost})`;
-    secIncrease1Btn.textContent = `Køb +${plusIncreasePerSec} pr. sekund (${increasePerSecCost})`;
+    increaseBtn.textContent = `Køb +${plusIncrease} per klik (${increaseCost})`;
+    secIncrease1Btn.textContent = `Køb +${plusIncreasePerSec} per sekund (${increasePerSecCost})`;
 }
 
 // Initial UI setup
