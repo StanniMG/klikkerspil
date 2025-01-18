@@ -8,8 +8,16 @@ const klikBtn = document.getElementById("klikBtn");
 const x1 = document.getElementById("x1");
 const x10 = document.getElementById("x10");
 const x100 = document.getElementById("x100");
+const x1000 = document.getElementById("x1000");
+const x10000 = document.getElementById("x10000");
+const x100000 = document.getElementById("x100000");
+const x1000000 = document.getElementById("x1000000");
+const x10000000 = document.getElementById("x10000000");
+const x100000000 = document.getElementById("x100000000");
+const x1000000000 = document.getElementById("x1000000000");
 const increaseBtn = document.getElementById("increase1Btn");
 const secIncrease1Btn = document.getElementById("secIncrease1Btn");
+
 
 // Variables
 let count = 0;
@@ -20,13 +28,18 @@ let increasePerSec = 0;
 let increasePerSecCost = 75;
 let plusIncreasePerSec = 5;
 
+// Helper function to format numbers with a dot every three zeros
+function formatNumber(number) {
+    return number.toLocaleString('da-DK'); // Danish locale for "." as thousand separator
+}
+
 // Helper function to update UI
 function updateUI() {
-    talLabel.textContent = count;
-    increaseLabel.textContent = `${increase} per klik`;
-    increasePerSecLabel.textContent = `${increasePerSec} per sekund`;
-    increaseBtn.textContent = `Køb +${plusIncrease} per klik (${increaseCost})`;
-    secIncrease1Btn.textContent = `Køb +${plusIncreasePerSec} per sekund (${increasePerSecCost})`;
+    talLabel.textContent = formatNumber(count);
+    increaseLabel.textContent = `${formatNumber(increase)} per klik`;
+    increasePerSecLabel.textContent = `${formatNumber(increasePerSec)} per sekund`;
+    increaseBtn.textContent = `Køb +${formatNumber(plusIncrease)} per klik (${formatNumber(increaseCost)})`;
+    secIncrease1Btn.textContent = `Køb +${formatNumber(plusIncreasePerSec)} per sekund (${formatNumber(increasePerSecCost)})`;
 }
 
 // Initial UI setup
@@ -62,6 +75,58 @@ x100.onclick = function () {
     plusIncreasePerSec = 500;
     updateUI();
 };
+
+x1000.onclick = function () {
+    increaseCost = 50000;
+    plusIncrease = 1000;
+    increasePerSecCost = 75000;
+    plusIncreasePerSec = 5000;
+    updateUI();
+};
+x10000.onclick = function () {
+    increaseCost = 500000;
+    plusIncrease = 10000;
+    increasePerSecCost = 750000;
+    plusIncreasePerSec = 50000;
+    updateUI();
+};
+x100000.onclick = function () {
+    increaseCost = 5000000;
+    plusIncrease = 100000;
+    increasePerSecCost = 7500000;
+    plusIncreasePerSec = 500000;
+    updateUI();
+};
+x1000000.onclick = function () {
+    increaseCost = 50000000;
+    plusIncrease = 1000000;
+    increasePerSecCost = 75000000;
+    plusIncreasePerSec = 5000000;
+    updateUI();
+};
+x10000000.onclick = function () {
+    increaseCost = 500000000;
+    plusIncrease = 10000000;
+    increasePerSecCost = 750000000;
+    plusIncreasePerSec = 50000000;
+    updateUI();
+};
+x100000000.onclick = function () {
+    increaseCost = 5000000000;
+    plusIncrease = 100000000;
+    increasePerSecCost = 7500000000;
+    plusIncreasePerSec = 500000000;
+    updateUI();
+};
+x1000000000.onclick = function () {
+    increaseCost = 50000000000;
+    plusIncrease = 1000000000;
+    increasePerSecCost = 75000000000;
+    plusIncreasePerSec = 5000000000;
+    updateUI();
+};
+
+
 
 // Buy more clicks
 increaseBtn.onclick = function () {
